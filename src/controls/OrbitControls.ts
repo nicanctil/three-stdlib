@@ -1057,6 +1057,7 @@ class OrbitControls extends EventDispatcher<StandardControlsEventMap> {
     }
 
     function addPointer(event: PointerEvent) {
+      if (pointers.find((p) => p.pointerId === event.pointerId)) return
       pointers.push(event)
     }
 
